@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="{{ 'theme.js' | asset_url }}" defer></script>
+    {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
+  </head>
+  <body>
+    <ul>
+      {% for element in collection %}
+        <li>
+          {{ element }}
+        </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
